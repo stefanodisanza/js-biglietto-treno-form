@@ -18,7 +18,19 @@ function calculateTicketPrice() {
   console.log("nome e cognome passeggero: " + nameSurname);
   console.log("tipo di sconto: " + discount);
 
-  document.getElementById("nameSurname").innerHTML = `Noeme e cognome passeggero: ${discountedTicketPrice.toFixed(2)}€`;
+  
+
+  var spanElement = document.getElementById("nome-passeggero");
+  spanElement.innerHTML = "Nome e cognome passeggero: " + nameSurname;
+
+  var spanElement = document.getElementById("numero-km");
+  spanElement.innerHTML = "Numero di km: " + km;
+
+  var spanElement = document.getElementById("prezzo-base");
+  spanElement.innerHTML = "Prezzo base: € " + ticketPrice;
+
+  var spanElement = document.getElementById("sconto");
+  spanElement.innerHTML = "Sconto:  " + discountOption;
   document.getElementById("result").innerHTML = `Prezzo biglietto: ${discountedTicketPrice.toFixed(2)}€`;
 
   console.log("prezzo biglietto: " + discountedTicketPrice.toFixed(2));
